@@ -377,6 +377,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-matrix-invers">pengertian Matrix Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-matrix-invers">Sifat sifat Matrix Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-dengan-eliminasi-gaus-jordan">Mencari invers dengan eliminasi gaus jordan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-invers-dengan-metode-gauss-jordan">Mencari Matriks Invers dengan metode Gauss-Jordan</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linier-dengan-metode-gauss-jordan-persamaan-4-variabel">Penyelesaian sistem persamaan linier dengan metode Gauss-Jordan (Persamaan 4 variabel)</a></li>
 </ul>
             </nav>
@@ -411,19 +412,16 @@ document.write(`
 </section>
 <section id="mencari-invers-dengan-eliminasi-gaus-jordan">
 <h2>Mencari invers dengan eliminasi gaus jordan<a class="headerlink" href="#mencari-invers-dengan-eliminasi-gaus-jordan" title="Link to this heading">#</a></h2>
+</section>
+<section id="mencari-matriks-invers-dengan-metode-gauss-jordan">
+<h2>Mencari Matriks Invers dengan metode Gauss-Jordan<a class="headerlink" href="#mencari-matriks-invers-dengan-metode-gauss-jordan" title="Link to this heading">#</a></h2>
 <p>Dalam penerapan gauss Jordan dengan menggunakan Operasi Baris Elementer atau disebut OBE. Operai OBE terdiri dari 3 cara, yaitu:</p>
-<p>Menambahkan kelipatan baris ke baris yang lain</p>
-<p>mengkalikan baris dengan bilangan selain nol</p>
-<p>Menukarkan posisi baris satu dengan baris yang lain</p>
-<p>Untuk mencari Invers dari sebuah Matrix kita harus memperhatikan persamaan - persamaannya. Untuk bisa memasukkannya dalam bentuk matrix kita pisah antara koefisien yang ada disebelah ruas kiri dan konstanta yang ada disebelah ruas kanan. contoh saya mempunyai persamaan linier 6 variabel:</p>
-<p>2X_1 + 2X_2 + 2X_3 + 4X_4 + 3X_5 + 6X_6 = 25</p>
-<p>2X_1 + 2X_2 + X_3 + 4X_4 + 4X_5 + 5X_6 = 22</p>
-<p>X_1 + X_2 + 3X_3 + 4X_4 + X_5 + 6X_6 = 23</p>
-<p>3X_1 + 2X_2 + X_3 + X_4 + 2X_5 + 3X_6 = 16</p>
-<p>2X_1 + X_2 + 2X_3 + 3X_4 + X_5 + 3X_6 = 17</p>
-<p>X_1 + 2X_2 + X_3 + X_4 + 3X_5 + X_6 = 11</p>
-<p>Lalu kita akan masukkan dalam bentuk matrix:</p>
-<p>\begin{align*} KoefisienA= \begin{bmatrix} 2&amp;2&amp;2&amp;4&amp;3&amp;6\ 2&amp;-2&amp;1&amp;4&amp;4&amp;5\ 1&amp;1&amp;3&amp;4&amp;1&amp;6\ 3&amp;2&amp;1&amp;1&amp;2&amp;3\ 2&amp;1&amp;2&amp;3&amp;1&amp;3\ 1&amp;2&amp;1&amp;1&amp;3&amp;1 \end{bmatrix} \ KonstanA= \begin{bmatrix} 25\ 22\ 23\ 16\ 17\ 13 \end{bmatrix} \ I= \begin{bmatrix} 1&amp;0&amp;0&amp;0&amp;0&amp;0\ 0&amp;1&amp;0&amp;0&amp;0&amp;0\ 0&amp;0&amp;1&amp;0&amp;0&amp;0\ 0&amp;0&amp;0&amp;1&amp;0&amp;0\ 0&amp;0&amp;0&amp;0&amp;1&amp;0\ 0&amp;0&amp;0&amp;0&amp;0&amp;1 \end{bmatrix} \end{align*}</p>
+<ol class="arabic simple">
+<li><p>Menambahkan kelipatan baris ke baris yang lain</p></li>
+<li><p>mengkalikan baris dengan bilangan selain nol</p></li>
+<li><p>Menukarkan posisi baris satu dengan baris yang lain</p></li>
+</ol>
+<p>Untuk mencari Invers dari sebuah Matrix kita harus memperhatikan persamaan - persamaannya. Untuk bisa memasukkannya dalam bentuk matrix kita pisah antara koefisien yang ada disebelah ruas kiri dan konstanta yang ada disebelah ruas kanan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library numpy</span>
@@ -1047,9 +1045,6 @@ IA-1</p>
    0.09090909 -0.18181818]]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1087,6 +1082,9 @@ dengan matriks B</p>
  [ 2.]
  [-1.]
  [ 1.]]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1155,6 +1153,7 @@ adalah
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-matrix-invers">pengertian Matrix Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-matrix-invers">Sifat sifat Matrix Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-dengan-eliminasi-gaus-jordan">Mencari invers dengan eliminasi gaus jordan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-invers-dengan-metode-gauss-jordan">Mencari Matriks Invers dengan metode Gauss-Jordan</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linier-dengan-metode-gauss-jordan-persamaan-4-variabel">Penyelesaian sistem persamaan linier dengan metode Gauss-Jordan (Persamaan 4 variabel)</a></li>
 </ul>
   </nav></div>
